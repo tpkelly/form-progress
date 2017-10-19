@@ -1,0 +1,15 @@
+.progress > div[complete]:after  {
+    top: -57px;
+}
+
+.progress div[current] {
+    top: -72px;
+}
+
+.progress div[incomplete] {
+    top: 0;
+}
+
+.progress div[incomplete] span {
+    top: -70px;
+}

@@ -1,0 +1,82 @@
+.progress {
+    display: table;
+}
+
+.progress-container {
+	height: 62px;
+	overflow: hidden;
+}
+
+.progress div {
+    width: 50px;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	border: 6px solid;
+	margin-right: 50px;
+}
+
+.progress div span {
+	color: black;
+	font-weight: bold;
+	font-size: 24pt;
+	font-family: Arial;
+}
+
+.progress div[incomplete] {
+    background-color: white;
+	border-color: lightgrey;
+	position: relative;
+	top: -14px;
+}
+
+.progress div[incomplete] span {
+    top: -50px;
+}
+
+.progress div[complete] {
+    background-color: #02818a;
+	border-color: #016c59;
+}
+
+.progress div[current] {
+    background-color: #2171b5;
+	border-color: #08519c;
+	z-index: 1;
+	position: relative;
+	top: -66px;
+}
+
+.progress > div[incomplete] span {
+	position: relative;
+}
+
+.progress > div[incomplete]:before, 
+.progress > div[complete]:after {
+    content: "";
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 70px;
+	height: 20px;
+	border: 6px solid black;
+	border-left-width: 0;
+	border-right-width: 0;
+	z-index: -1;
+}
+
+.progress > div[incomplete]:before {
+	left: -64px;
+    background-color: white;
+	border-color: lightgrey;
+}
+
+.progress > div[complete]:after  {
+    top: -50px;
+	left: 48px;
+    background-color: #02818a;
+	border-color: #016c59;
+}
